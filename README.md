@@ -10,7 +10,7 @@
 * requirements.txt (numpy version, < 1.19, tf version 2.4 ...etc, packages versions)
 * python 3.6.9 (with venv)
 * GPU 1080 Ti, k20c
-* labelImg: for hand labeling daasets
+* labelImg: for hand labeling datasets
 
 ## Data & problem explanation
 include sample data
