@@ -4,7 +4,9 @@
 
 ## Prerequisites
 requirements.txt (numpy version, < 1.19, tf version 2.4 ...etc)
+
 tf object detection API (version 0.1) and coco api
+
 python 3.6.9
 GPU 1080 Ti, k20c
 labelImg
