@@ -4,7 +4,7 @@
 * TF object detction api: https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/index.html
 * TF repo: https://github.com/tensorflow/tensorflow
 * LabelImg: https://github.com/tzutalin/labelImg
-* cocoAPI:https://github.com/cocodataset/cocoapi
+* cocoAPI: https://github.com/cocodataset/cocoapi
 
 ## Prerequisites
 * requirements.txt (numpy version, < 1.19, tf version 2.4 ...etc, packages versions)
