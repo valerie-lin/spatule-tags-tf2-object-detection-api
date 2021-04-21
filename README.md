@@ -1,11 +1,5 @@
 # spatule-tags-tf2-object-detection-api
 
-## Important links
-* TF object detction api: https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/index.html
-* TF repo: https://github.com/tensorflow/tensorflow
-* LabelImg: https://github.com/tzutalin/labelImg
-* cocoAPI: https://github.com/cocodataset/cocoapi
-
 ## Prerequisites
 * requirements.txt (numpy version, < 1.19, tf version 2.4 ...etc, packages versions)
 * python 3.6.9 (with venv)
@@ -155,5 +149,13 @@ We ran this custom evaluation on all the labelled data that we have (although th
 $ ssh -L Localport:127.0.0.1:GPUport path/to/GPU
 ```
 On local computers: go to localhost:Localport
+
+
+
+## Important links
+* TF object detction api: https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/index.html
+* TF repo: https://github.com/tensorflow/tensorflow
+* LabelImg: https://github.com/tzutalin/labelImg
+* cocoAPI: https://github.com/cocodataset/cocoapi
 
 ## Future work
