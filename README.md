@@ -116,8 +116,10 @@ eval_input_reader {
 }
 ```
 
-include sample training
-
+* To set the num of steps
+```
+total_steps: 5000
+```
 
 ## Results/Evaluation
 custom evaluation process
