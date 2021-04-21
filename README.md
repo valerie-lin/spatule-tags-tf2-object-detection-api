@@ -145,7 +145,7 @@ Since the evaluation tools of the Object Detection API are not very practical, w
 
 For each image, it computes the IoU and the areas of the bounding boxes for detections at two different threshold .3 and .7. It finally outputs a CSV `eval_test.csv` file which contains the metrics for each image.
 
-We ran this custom evaluation on all the labelled data that we have (although the model was trained on synthetic data). We first had to cut the original images into 640x640 images. It resulted in an overall average IoU of 0.95 and specifically on images that contain a tag (a vast minority of the data) have an average IoU of 0.60. This number is essentially pulled down by images that have cut tags as you can see below.
+We ran this custom evaluation on all the labelled data that we have (although the model was trained on synthetic data). We first had to cut the original images into 640x640 images. It resulted in an overall average IoU of 0.95 and specifically on images that contain a tag (a vast minority of the data) have an average IoU of 0.60. This number is essentially pulled down by images that have cut tags as you can see below In green are the ground truth labels, and in blue the detections at threshold 0.3.
 
 ![Good detection](sample-data/detection-results/metricsIMAG1189_9.jpg)
 ![Bad detection](sample-data/detection-results/metricsIMAG52026_17.jpg)
