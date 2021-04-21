@@ -1,0 +1,14 @@
+<annotation verified="yes">
+	<folder>seamless-night</folder>
+	<filename></filename>
+	<path>/Users/valerielin/Desktop/Spring2021/special_problem/Spatules_Camargue/SelectionDeepLearning_2/seamless-night</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>
