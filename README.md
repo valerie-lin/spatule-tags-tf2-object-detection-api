@@ -15,10 +15,15 @@
 ## Data & problem explanation
 In the south of France, and in other collaborating European countries, scientists are studying birds called spatules. To better understand their behaviours such as their migrations, they have attached tags on their legs with a unique identification sequence of characters. They have also set cameras on the field which take pictures regularly (every 10 minutes). Until now, they have extracted data from these images by hand. 
 
+
+![Image example of on-field camera](sample-data/7mai2018%20(21).JPG)
+
 The objective of the project is to perform object detection to locate the tags on images. An important second step will be to read the tags, but it is not tackled here.
 
 The tags have a common pattern. They are made of 4 black letters or digits on a white background, with a specific font. Some letters and digits are removed to avoid confusion between similar ones (for example E is removed because it looks too much like F).
-[include font here]
+
+![Tag font](sample-data/SPOO-FONT.jpg)
+
 The main problem we faced is that there are too few tags in real data. Most of the time, birds in the pictures do not have a tag, or it is hidden by other birds or because they are sitting. We also didn’t want to hand-label thousands of images.
 
 
@@ -29,7 +34,10 @@ To overcome this issue, we proceeded to synthetic data generation. To do so, we 
 
 To do so, we still had to hand-label some images. We used the labelImg library to annotate some images. From there, we extracted some real tags. We combined them with images from our annotated images which we know do not contain tags, referred as background. The combining technique is called seamless cloning and is implemented in Python's OpenCV library. It basically allowed us to “paste” real tags on background smoothly by masking all background of the real tags image.
 
-(include example below).
+
+![Seamless background](sample-data/seamless-cloning-background.png)
+![Seamless tag](sample-data/seamless-cloning-tag.png)
+![Seamless result](sample-data/seamless-cloning-result.png)
 
 We choose a random location to paste the tag on the background so it is easy to automatically create annotations in the XML format (Pascal VOC format). The original images’ sizes are about 4000x3000. However, the object detection model we will use takes 640x640 images as inputs. So, we crop the background to match this size. The tags’ sizes are not changed.
 
