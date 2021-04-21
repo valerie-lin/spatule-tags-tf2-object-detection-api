@@ -1,10 +1,11 @@
 # spatule-tags-tf2-object-detection-api
 
-## Important links
-* TF object detction api: https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/index.html
-* TF repo: https://github.com/tensorflow/tensorflow
-* LabelImg: https://github.com/tzutalin/labelImg
-* cocoAPI: https://github.com/cocodataset/cocoapi
+## Acknowledgements
+
+Jocelyn Champagnon, researcher at Tour du Valat, for providing us with the data.
+
+Cédric Pradalier, Associate Professor at Georgia Tech, and Aishwarya Venkataramanan, PhD. student, for their weekly support
+
 
 ## Prerequisites
 * requirements.txt (numpy version, < 1.19, tf version 2.4 ...etc, packages versions)
@@ -49,7 +50,14 @@ separating eval and train tags
 
 ## Training
 
-The structure should be like:
+Our training dataset is made of 60% of images containing a tag (see above) and 40% without tag and contains a total of 5,000 images.
+Before running training, we need to run the `generate_tfrecord.py` script in order to convert the XML files into TF records readable by the API.
+
+```
+$ python generate_tfrecord.py -x path/to/images/train -l path/to/annotations/label_map.pbtxt -o path/to/annotations/train.record
+```
+To perform training we used Google’s Object Detection API.
+The structure of the training folder should be like:
 ```
 .
 ├── annotations
@@ -134,9 +142,29 @@ custom evaluation process
 In pipeline.config, set the `path/to/test.record` like above. Run evaluation after training.
 For example, run evaluation every 5k steps and launch TensorBoard to see the results.
 
+Since the evaluation tools of the Object Detection API are not very practical, we have developped our own evaluation script: `custom_evaluation.py`. It can be run from the root of the training folder. It opens the latest checkpoint in the models/my_ssd_resnet50_v1_fpn folder. It runs detections on the images/test folder and uses the XML files to get the ground truth labels.
+
+For each image, it computes the IoU and the areas of the bounding boxes for detections at two different threshold .3 and .7. It finally outputs a CSV `eval_test.csv` file which contains the metrics for each image.
+
+We ran this custom evaluation on all the labelled data that we have (although the model was trained on synthetic data). We first had to cut the original images into 640x640 images. It resulted in an overall average IoU of 0.95 and specifically on images that contain a tag (a vast minority of the data) have an average IoU of 0.60. This number is essentially pulled down by images that have cut tags as you can see below In green are the ground truth labels, and in blue the detections at threshold 0.3.
+
+![Good detection](sample-data/detection-results/metricsIMAG1189_9.jpg)
+![Bad detection](sample-data/detection-results/metricsIMAG52026_17.jpg)
+
 ### To connect from local computers
 ```
 $ ssh -L Localport:127.0.0.1:GPUport path/to/GPU
 ```
+On local computers: go to localhost:Localport
+
+
+
+## Important links
+* TF object detction api: https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/index.html
+* TF repo: https://github.com/tensorflow/tensorflow
+* LabelImg: https://github.com/tzutalin/labelImg
+* cocoAPI: https://github.com/cocodataset/cocoapi
 
 ## Future work
+## Credits
+This project was carried by Valerie Lin and Antoine Rollet, Master students in CS at Georgia Tech
