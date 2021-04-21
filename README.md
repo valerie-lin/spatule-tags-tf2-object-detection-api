@@ -58,11 +58,27 @@ In the `/images/train` and `/images/test` files, we can add our .jpg and the cor
 
 
 In pipeline.config
+* To set the batch_size:
 ```
-steps ... 
-evaluation folder... 
+train_config {
+  batch_size: 1
+  ...
+  }
 
 ```
+
+* To set the checkpoints folder:
+```
+  fine_tune_checkpoint: "./pre-trained-models/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0"
+```
+
+
+* If there is only one class on label_map.pbtxt, set the type as "detection" 
+```
+  fine_tune_checkpoint_type: "detection"
+
+```
+* 
 
 include sample training
 
