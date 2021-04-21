@@ -2,7 +2,8 @@
 
 ## Acknowledgements
 
-Jocelyn Champagnon, researcher at Tour du Valat, for providing us with the data
+Jocelyn Champagnon, researcher at Tour du Valat, for providing us with the data.
+
 Cédric Pradalier, Associate Professor at Georgia Tech, and Aishwarya Venkataramanan, PhD. student, for their weekly support
 
 
