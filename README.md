@@ -123,7 +123,12 @@ total_steps: 5000
 
 ## Results/Evaluation
 custom evaluation process
-In pipeline.config, set the `test.record path` like above. Run evaluation after training.
+In pipeline.config, set the `path/to/test.record` like above. Run evaluation after training.
 For example, run evaluation every 5k steps and launch TensorBoard to see the results.
+
+### To connect from local computers
+```
+$ ssh -L Localport:127.0.0.1:GPUport path/to/GPU
+```
 
 ## Future work
