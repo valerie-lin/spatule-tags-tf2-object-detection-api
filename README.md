@@ -123,8 +123,7 @@ total_steps: 5000
 
 ## Results/Evaluation
 custom evaluation process
-In pipeline.config
-```
-batch_size: ..
-```
+In pipeline.config, set the `test.record path` like above. Run evaluation after training.
+For example, run evaluation every 5k steps and launch TensorBoard to see the results.
+
 ## Future work
