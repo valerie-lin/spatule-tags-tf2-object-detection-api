@@ -93,9 +93,28 @@ train_config {
 * If there is only one class on label_map.pbtxt, set the type as "detection" 
 ```
   fine_tune_checkpoint_type: "detection"
-
 ```
-* 
+* To set the input path (Use relative path)
+```
+train_input_reader {
+  label_map_path: "./annotations/label_map.pbtxt"
+  tf_record_input_reader {
+    input_path: "./annotations/train.record"
+  }
+}
+eval_config {
+  metrics_set: "coco_detection_metrics"
+  use_moving_averages: false
+}
+eval_input_reader {
+  label_map_path: "./annotations/label_map.pbtxt"
+  shuffle: false
+  num_epochs: 1
+  tf_record_input_reader {
+    input_path: "./annotations/test.record"
+  }
+}
+```
 
 include sample training
 
