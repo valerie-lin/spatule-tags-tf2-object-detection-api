@@ -145,5 +145,6 @@ For example, run evaluation every 5k steps and launch TensorBoard to see the res
 ```
 $ ssh -L Localport:127.0.0.1:GPUport path/to/GPU
 ```
+On local computers: go to localhost:Localport
 
 ## Future work
