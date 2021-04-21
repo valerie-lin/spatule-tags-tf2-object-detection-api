@@ -1,5 +1,11 @@
 # spatule-tags-tf2-object-detection-api
 
+## Acknowledgements
+
+Jocelyn Champagnon, researcher at Tour du Valat, for providing us with the data
+Cédric Pradalier, Associate Professor at Georgia Tech, and Aishwarya Venkataramanan, PhD. student, for their weekly support
+
+
 ## Prerequisites
 * requirements.txt (numpy version, < 1.19, tf version 2.4 ...etc, packages versions)
 * python 3.6.9 (with venv)
@@ -159,3 +165,5 @@ On local computers: go to localhost:Localport
 * cocoAPI: https://github.com/cocodataset/cocoapi
 
 ## Future work
+## Credits
+This project was carried by Valerie Lin and Antoine Rollet, Master students in CS at Georgia Tech
