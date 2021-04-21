@@ -49,7 +49,14 @@ separating eval and train tags
 
 ## Training
 
-The structure should be like:
+Our training dataset is made of 60% of images containing a tag (see above) and 40% without tag and contains a total of 5,000 images.
+Before running training, we need to run the `generate_tfrecord.py` script in order to convert the XML files into TF records readable by the API.
+
+```
+$ python generate_tfrecord.py -x path/to/images/train -l path/to/annotations/label_map.pbtxt -o path/to/annotations/train.record
+```
+To perform training we used Google’s Object Detection API.
+The structure of the training folder should be like:
 ```
 .
 ├── annotations
