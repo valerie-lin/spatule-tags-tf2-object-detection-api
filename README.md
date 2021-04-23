@@ -14,7 +14,9 @@ Cédric Pradalier, Associate Professor at Georgia Tech, and Aishwarya Venkataram
 * labelImg: for hand labeling datasets
 
 ## Data & problem explanation
+
 In the south of France, and in other European countries, scientists are studying birds called Eurasian spoonbills (Platalea leucorodia). To better understand their behaviours such as their migrations, they have attached tags on their legs with a unique identification sequence of characters. They have also set cameras on the field which take pictures regularly (every 10 minutes). Until now, they have extracted data from these images by hand. 
+
 
 
 ![Image example of on-field camera](sample-data/7mai2018%20(21).JPG)
@@ -139,6 +141,7 @@ total_steps: 5000
 
 ## Results/Evaluation
 custom evaluation process
+
 In pipeline.config, set the `path/to/test.record` like above. Run evaluation after training.
 For example, run evaluation every 5k steps and launch TensorBoard to see the results.
 
