@@ -14,7 +14,7 @@ Cédric Pradalier, Associate Professor at Georgia Tech, and Aishwarya Venkataram
 * labelImg: for hand labeling datasets
 
 ## Data & problem explanation
-In the south of France, and in other collaborating European countries, scientists are studying birds called spatules. To better understand their behaviours such as their migrations, they have attached tags on their legs with a unique identification sequence of characters. They have also set cameras on the field which take pictures regularly (every 10 minutes). Until now, they have extracted data from these images by hand. 
+In the south of France, and in other collaborating European countries, scientists are studying nestng spatula birds in Camargues, called spatules. To better understand their behaviours such as their migrations, they have attached tags on their legs with a unique identification sequence of characters. They have also set cameras on the field which take pictures regularly (every 10 minutes). Until now, they have extracted data from these images by hand. 
 
 
 ![Image example of on-field camera](sample-data/7mai2018%20(21).JPG)
