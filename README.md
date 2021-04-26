@@ -1,4 +1,4 @@
-# spatule-tags-tf2-object-detection-api
+# Spoonbill tags detection
 
 ## Acknowledgements
 
@@ -147,6 +147,11 @@ eval_input_reader {
 ```
 total_steps: 5000
 ```
+To montior the progress through Tensorboard from another computer (especially if it has not GUI), use:
+```
+$ ssh -L Localport:127.0.0.1:GPUport path/to/GPU
+```
+On local computer: go to localhost:Localport
 
 ## Results/Evaluation
 custom evaluation process
@@ -162,13 +167,6 @@ We ran this custom evaluation on all the labelled data that we have (although th
 
 ![Good detection](sample-data/detection-results/metricsIMAG1189_9.jpg)
 ![Bad detection](sample-data/detection-results/metricsIMAG52026_17.jpg)
-
-### To connect from local computers
-```
-$ ssh -L Localport:127.0.0.1:GPUport path/to/GPU
-```
-On local computers: go to localhost:Localport
-
 
 
 ## Important links
