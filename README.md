@@ -20,7 +20,7 @@ Cédric Pradalier, Associate Professor at Georgia Tech, and Aishwarya Venkataram
 
 ## Data & problem explanation
 
-In the south of France, and in other European countries, scientists are studying birds called Eurasian spoonbills (Platalea leucorodia). To better understand their behaviours such as their migrations, they have attached tags on their legs with a unique identification sequence of characters. They have also set cameras on the field which take pictures regularly (every 10 minutes). Until now, they have extracted data from these images by hand. 
+At the Tour du Valat, in the south of France, and in other European countries, scientists are studying birds called Eurasian spoonbills (Platalea leucorodia). To better understand their behaviours such as their migrations, they have attached tags on their legs with a unique identification sequence of characters. They have also set cameras on the field which take pictures regularly (every 10 minutes). Until now, they have extracted data from these images by hand. 
 
 
 
