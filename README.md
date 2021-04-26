@@ -8,8 +8,13 @@ Cédric Pradalier, Associate Professor at Georgia Tech, and Aishwarya Venkataram
 
 
 ## Prerequisites
-* requirements.txt (numpy version, < 1.19, tf version 2.4 ...etc, packages versions)
-* python 3.6.9 (with venv)
+* python 3.6.9
+* python modules listed in requirements.txt:
+    * numpy==1.19.5
+    * tensorflow==2.4.1
+    * matplotlib==3.3.4
+    * Pillow==8.1.2
+    * opencv-python==4.5.1
 * GPU 1080 Ti, k20c
 * labelImg: for hand labeling datasets
 
@@ -42,7 +47,7 @@ To do so, we still had to hand-label some images. We used the labelImg library t
 ![Seamless tag](sample-data/seamless-cloning-tag.png)
 ![Seamless result](sample-data/seamless-cloning-result.png)
 
-We choose a random location to paste the tag on the background so it is easy to automatically create annotations in the XML format (Pascal VOC format). The original images’ sizes are about 4000x3000. However, the object detection model we will use takes 640x640 images as inputs. So, we crop the background to match this size. The tags’ sizes are not changed.
+We choose a random location to paste the tag on the background so it is easy to automatically create annotations in the XML format (Pascal VOC format). The original images’ sizes are about 4000x3000. However, the object detection model we will use takes 640x640 images as inputs. So, we crop a random 640x640 window of the background to match this size. The tags’ sizes are not changed.
 
 Another issue we faced, is that we did not want the model to recognize the letters and digits in the tags but the general pattern of tags. To make sure of it in the evaluation phase, we separate tags from the training and testing dataset.
 
