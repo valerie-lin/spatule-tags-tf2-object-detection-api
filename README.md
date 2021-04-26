@@ -15,6 +15,10 @@ Cédric Pradalier, Associate Professor at Georgia Tech, and Aishwarya Venkataram
     * matplotlib==3.3.4
     * Pillow==8.1.2
     * opencv-python==4.5.1
+
+```
+pip install -r requirements.txt
+```
 * GPU 1080 Ti, k20c
 * labelImg: for hand labeling datasets
 
