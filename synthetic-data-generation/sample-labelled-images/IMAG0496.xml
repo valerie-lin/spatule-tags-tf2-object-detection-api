@@ -1,0 +1,14 @@
+<annotation verified="yes">
+	<folder>test-data</folder>
+	<filename>IMAG0496.JPG</filename>
+	<path>/home/antoine/PycharmProjects/spatule-birds-tags/test-data/IMAG0496.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3264</width>
+		<height>2448</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>
